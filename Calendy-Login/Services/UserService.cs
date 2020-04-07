@@ -48,6 +48,10 @@ namespace Calendy_Login.Services
                 Events = null
             });
         }
+        public IEnumerable<User> GetAll()
+        {
+            return userList;
+        }
         public void UpdateUserList(Events events, bool flag)
         {
             var user = userList.Where(x => x.Id == events.User_id).FirstOrDefault();

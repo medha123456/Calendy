@@ -72,7 +72,7 @@ namespace Calendy_Login.Controllers
             var eventValidation = await _eventServices.PostEvent(events);
             if (eventValidation == 0)
                 return Ok(HttpStatusCode.Created);
-            return BadRequest();
+            return BadRequest("Event Already exists at the requested time");
         }
 
         [HttpDelete]
@@ -86,7 +86,7 @@ namespace Calendy_Login.Controllers
             var eventValidation = await _eventServices.DeleteEventById(id);
             if (eventValidation != 0)
                 return Ok(HttpStatusCode.OK);
-            return BadRequest();
+            return BadRequest("Event didn't found");
         }
     }
 }

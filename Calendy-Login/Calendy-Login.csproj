@@ -492,6 +492,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <None Include="Properties\PublishProfiles\Calendy-Login-Demo - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\Calendy-Login20200407070347.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -23,6 +23,15 @@ namespace Calendy_Login.Controllers
             this.userService = userService;
         }
         [HttpGet]
+        [Route("")]
+        // GET api/User
+        public IEnumerable<User> GetAllUser()
+        {
+            if (userService.GetAll() == null)
+                return null;
+            return userService.GetAll();
+        }
+        [HttpGet]
         [Route("{id}")]
         // GET api/User/id
         public async Task<IHttpActionResult> GetUserDetails(Guid id, [FromUri]UserLogin userLogin)

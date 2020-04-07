@@ -10,6 +10,7 @@ namespace Calendy_Login.Services.Interfaces
 {
     public interface IUserService
     {
+        IEnumerable<User> GetAll();
         Task<User> GetUserById(Guid id);
         Task<User> GetUserByUsername(string username);
         Task<User> PostUser(UserDTO user);
